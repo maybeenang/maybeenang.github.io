@@ -23,7 +23,10 @@ const ExperienceCard = () => {
       <Section variant="card" className="">
         <ul className="list-disc space-y-4 pl-4">
           {Array.from({ length: 3 }).map((_, i) => (
-            <li className="pl-4 text-sm text-text-secondary">
+            <li
+              className="pl-4 text-sm text-text-secondary"
+              key={`exp-desc-${i}`}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

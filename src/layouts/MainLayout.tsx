@@ -6,7 +6,7 @@ import { Outlet } from 'react-router';
 
 export default function MainLayout() {
   return (
-    <main className="max-w-screen overflow-x-hidden bg-background">
+    <main className="max-w-screen overflow-x-hidden bg-background font-mono">
       <div
         className={cn(
           'grid min-h-dvh grid-cols-1 grid-rows-[1fr_1px_auto_1px_auto]',

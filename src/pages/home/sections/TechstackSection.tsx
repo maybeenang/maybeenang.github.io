@@ -2,7 +2,7 @@ import Divider from '@/components/ui/Divider';
 import Heading from '@/components/ui/Heading';
 import Section from '@/components/ui/Section';
 import TechstackIcon from '@/components/ui/TechstackIcon';
-import { techstack } from '@/lib/contant';
+import { techstack } from '@/lib/constant';
 
 const TechstackSection = () => {
   return (

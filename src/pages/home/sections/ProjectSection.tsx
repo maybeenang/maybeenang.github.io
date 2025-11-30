@@ -24,8 +24,8 @@ const ProjectSection = () => {
         className="grid grid-cols-2 divide-x-1 divide-y-1 divide-border"
         variant="paddingless"
       >
-        {Array.from({ length: 10 }).map((project, i) => (
-          <ProjectCard key={1} />
+        {Array.from({ length: 10 }).map((_, i) => (
+          <ProjectCard key={`project-${i}`} />
         ))}
       </Section>
     </>

@@ -22,7 +22,7 @@ const ExperienceSection = () => {
 
       <Section className="" variant="paddingless">
         <ul>
-          {Array.from({ length: 5 }).map((experience, i) => (
+          {Array.from({ length: 5 }).map((_, i) => (
             <ExperienceCard key={i} />
           ))}
         </ul>

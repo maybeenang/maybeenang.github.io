@@ -1,7 +1,35 @@
+import {
+  DiscordIcon,
+  GithubIcon,
+  LinkedinIcon,
+  TelegramIcon,
+} from '@/components/icons';
 import { Button } from '@/components/ui/Button';
 import Heading from '@/components/ui/Heading';
 import Section from '@/components/ui/Section';
-import StackIcon from 'tech-stack-icons';
+
+const socialLinks: { name: string; url: string; icon: React.ReactNode }[] = [
+  {
+    name: 'GitHub',
+    url: 'github.com/maybeenang',
+    icon: <GithubIcon className="h-6 w-6 fill-current" />,
+  },
+  {
+    name: 'LinkedIn',
+    url: 'linkedin.com/in/maybeenang',
+    icon: <LinkedinIcon className="h-6 w-6 fill-current" />,
+  },
+  {
+    name: 'Telegram',
+    url: 'github.com/maybeenang',
+    icon: <TelegramIcon className="h-6 w-6 fill-current" />,
+  },
+  {
+    name: 'Discord',
+    url: 'github.com/maybeenang',
+    icon: <DiscordIcon className="h-6 w-6 fill-current" />,
+  },
+];
 
 const FooterSection = () => {
   return (
@@ -20,14 +48,21 @@ const FooterSection = () => {
         <Button variant="secondary">Send an email</Button>
       </Section>
 
-      <section className="grid grid-cols-3 gap-6">
-        {Array.from({ length: 3 }).map((_, i) => (
+      <section className="grid grid-cols-4 gap-6">
+        {socialLinks.map((social, i) => (
           <span
-            key={i}
+            key={`social-link-${i}`}
             className="flex flex-row items-center gap-2 text-text-secondary"
           >
-            <StackIcon name="html5" className="h-4 w-4" variant="grayscale" />
-            Social {i + 1}
+            {social.icon}
+            <a
+              href={`https://${social.url}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              {social.name}
+            </a>
           </span>
         ))}
       </section>
