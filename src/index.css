@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans:
+    'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono: 'Roboto Mono';
+
+  --color-background: var(--background);
+  --color-section: var(--section);
+  --color-border: var(--border);
+
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+
+  --color-primary-button: var(--color-sky-500);
+  --color-secondary-button: #384152;
+}
+
+:root {
+  --background: #040711;
+  --border: #1e2029;
+  --section: #11141d;
+
+  --text: #ffffff;
+  --text-secondary: #9ba1ae;
+}
+
+#root {
+  isolation: isolate;
+}
+
+body {
+  position: relative;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
